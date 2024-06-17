@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageViewRestaurant"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:src="@drawable/restaurant"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+    <!-- Sección de pastelchoclo -->
+    <ImageView
+        android:id="@+id/imageViewPastelChoclo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pastelchoclo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewRestaurant" />
+    <TextView
+        android:id="@+id/textViewPastelDeChoclo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Pastel de Choclo"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@id/imageViewPastelChoclo"
+        app:layout_constraintStart_toEndOf="@id/imageViewPastelChoclo"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp" />
+    <TextView
+        android:id="@+id/textViewCantPastel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cant."
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/textViewPastelDeChoclo"
+        app:layout_constraintStart_toEndOf="@id/imageViewPastelChoclo"
+        android:layout_marginEnd="8dp" />
+    <TextView
+        android:id="@+id/tvPastelTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total: $0"
+        app:layout_constraintTop_toBottomOf="@id/etPastelCantidad"
+        app:layout_constraintStart_toEndOf="@id/imageViewPastelChoclo"
+        android:layout_marginBottom="16dp" />
+    <EditText
+        android:id="@+id/etPastelCantidad"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/textViewPastelDeChoclo"
+        app:layout_constraintStart_toEndOf="@id/textViewCantPastel" />
+
+    <!-- Sección de Cazuela -->
+    <ImageView
+        android:id="@+id/imageViewCazuela"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/cazuela"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/tvPastelTotal"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/textViewCazuela"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Cazuela"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@id/imageViewCazuela"
+        app:layout_constraintStart_toEndOf="@id/imageViewCazuela"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/textViewCantCazuela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cant."
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/textViewCazuela"
+        app:layout_constraintStart_toEndOf="@id/imageViewCazuela"
+        android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:id="@+id/tvCazuelaTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total: $0"
+        app:layout_constraintTop_toBottomOf="@id/etCazuelaCantidad"
+        app:layout_constraintStart_toEndOf="@id/imageViewCazuela"
+        android:layout_marginBottom="16dp" />
+    <EditText
+        android:id="@+id/etCazuelaCantidad"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/textViewCazuela"
+        app:layout_constraintStart_toEndOf="@id/textViewCantCazuela" />
+
+
+    <TextView
+        android:id="@+id/tvComidaTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comida: $0"
+        app:layout_constraintTop_toBottomOf="@id/tvCazuelaTotal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="101dp"/>
+    <Switch
+        android:id="@+id/switchPropina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incluir Propina 10%"
+        app:layout_constraintTop_toBottomOf="@id/tvComidaTotal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"/>
+    <TextView
+        android:id="@+id/tvPropina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Propina: $0"
+        app:layout_constraintTop_toBottomOf="@id/switchPropina"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TOTAL: $0"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tvPropina"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="49dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
